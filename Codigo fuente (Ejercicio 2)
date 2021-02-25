@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int validation();
+long transform(int);
+
+void main(){
+	int num;
+	num = validation();
+	printf("\nEl número en bianrio: %ld", trasform(num));
+}
+
+int validation(){
+	int n;
+	do{
+		printf("\nIntroduzca un número mayor que 0: ");
+		scanf("%d", &n);
+	}while(n<=0);
+	return n;
+}
+
+long transform(int dNum){
+	long bNum = 0;
+	int reminder = 0,tens = 1;
+	while(dNum!=0){
+		reminder = dNum % 2;
+		bNum = bNum + reminder * tens;
+		tens = tens * 10;
+		dNum = dNum / 2;
+	}
+	return bNum;
+}

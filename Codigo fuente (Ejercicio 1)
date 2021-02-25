@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int validation();
+void primeNum(int);
+
+void main() {
+	int num;
+	num = validation();
+	primeNum(num);
+}
+
+int validation(){
+	int num;
+	while(num<1){
+		printf("\nIntroduzca un número mayor que 0: ");
+		scanf("%d", &num);
+	}
+	return num;
+}
+void primeNum(int num){
+	int count = 0, i;
+	for(i=0; i<num-1; i++){
+		if(num%i == 0){
+			count++;
+		}
+	}
+	if(count<2){
+		printf("\nEl número es primo.");
+	else
+		printf("\nEl número no es primo.");
+	}
+}
