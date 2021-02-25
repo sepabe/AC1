@@ -26,7 +26,7 @@ void primeNum(int num){
 	}
 	if(count<2){
 		printf("\nEl número es primo.");
-	else
+	}else{
 		printf("\nEl número no es primo.");
 	}
 }
